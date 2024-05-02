@@ -1,0 +1,39 @@
+#DAFTAR BARANG BESERTA HARGANYA
+print("|====================================|")
+print("|== DAFTAR BARANG BESERTA HARGANYA ==|")
+print("|====================================|")
+nama=input("masukkan nama pembeli: ")
+print(f"{nama} Apa yang anda butuhkan")
+daftar_barang = {
+    "Beras" : 10000,
+    "Gula" : 8000,
+    "Telur" : 2000,
+    "Minyak Goreng" : 15000,
+    "Garam" : 5000,
+    "Solar" : 15000,
+}
+
+# MENAMPILKAN NAMA BARANG
+
+print(f"Daftar barang : ")
+for barang, harga in daftar_barang.items():
+    print(f"{barang} : Rp {harga}")
+
+# INPUT JUMLAH BARANG YANG DI BELI
+
+total_belanja = 0
+jumlah_barang = int(input("Masukkan jumlah barnag yang ingin di beli : "))
+
+# MENGHITUNG TOTAL BELANJA
+
+for i in range(jumlah_barang):
+    barang = input(f"Masukkan nama barang ke {i+1} : ")
+    if barang in daftar_barang:
+        total_belanja += daftar_barang[barang]
+    else:
+        print(f"{barang} Tidak ada dalalm daftar barang.")
+        print(""
+
+# MENAMPILKAN TOTAL BELANJA
+
+print(f"\nTotal belanja anda adalah {total_belanja}")
